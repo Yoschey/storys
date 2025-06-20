@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Josh's Wunderwelt</title>
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-100">
+       <!-- Include the menu -->
+        <div id="menu-container"></div>
+
+        <div class="container mx-auto px-4 py-8"></div>
+            <h1 class="text-3xl font-bold text-center mb-8">Geschichten</h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Story Card 1 -->
+                <a href="story1.html" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="./media/ai-art/cosmic-horror-2.png" alt="Story 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold text-gray-800">Die Abgründe des Wahnsinns</h2>
+                        <p class="text-gray-600 mt-2">Ein Blick in die unergründlichen Tiefen des Unbekannten...</p>
+                    </div>
+                </a>
+
+                <!-- Story Card 2 -->
+                <a href="story2.html" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="./media/ai-art/cosmic-horror-1.png" alt="Story 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold text-gray-800">Die Welt von Vrondus</h2>
+                        <p class="text-gray-600 mt-2">Entdecke die magischen Länder einer fremden Welt...</p>
+                    </div>
+                </a>
+
+                <!-- Story Card 3 -->
+                <a href="story3.html" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="./media/ai-art/cthulu-2.png" alt="Story 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold text-gray-800">New World Chronicles</h2>
+                        <p class="text-gray-600 mt-2">Abenteuer in den unentdeckten Regionen...</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </body>
+    <!-- Script to load the menu -->
+        <script>
+            // Fetch and insert the menu
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading menu:', error);
+                });
+        </script>
+</html>

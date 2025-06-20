@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Josh's Wunderwelt</title>
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-100">
+    <!-- Include the menu -->
+        <div id="menu-container"></div>
+
+        <div class="container mx-auto px-4 py-8">
+            <div class="max-w-4xl mx-auto mt-8">
+                <p class="text-gray-800 leading-relaxed">
+                    Er schlug seine Augen auf. Ausgeschlafen war er nicht aber er wusste das er aufstehen musste. Er schlug seine Decke zurück und setzte sich auf den Rand seinen Strohbetts. Gähnend zog er seine Hose und Schuhe an, dann schlurfte er an die Feuerstelle und entzündete eine Feuer. "Ohne Kaffee schaffe ich den Tag heute nicht" murmelte er während er das schwarze Pulver in die Kanne füllte. Er hing die Kanne über die Flammen und machte sich auf die Suche nach seiner Pfeife. Er fand sie auf dem Tisch zwischen einigen Bierflaschen. Er griff erst nach den Flaschen und räumte sie auf die Seite, dann nahm er seine Pfeife, entfernte die Tabakreste die noch drin waren und füllte sie mit seinem stärksten Kraut. "Rauch es nicht auf leeren Magen sonst haut es dich um" hörte er die Stimme des Verkäufers doch er wusste das ein halber Kopf am Morgen nach ein langen Nacht ihn wieder auf die Füße bringt. Gerade als er der Kopf halb gefüllt hatte und die Pfeife angezündet hatte hörte er das blubbern von der Feuerstelle. Er stand auf und holte sich eine Tasse und füllte sie. So saß er eine halbe Stunde mit dem Blick aus dem Fenster und trank seinen Kaffee. Als seine Pfeife leer geraucht war und in der Tasse nur noch ein Schluck war, stand er auf und ging nach draußen. Die Sonne war vollends aufgegangen und alles lag im goldenen Licht des Morgens. Als er die gefällten Bäume am Waldrand sah seufzte er. Er musste sie heute alle Entasten, Zersägen und ein Ofenfertige Stücke hacken um seinen Auftrag rechtzeitig erfüllen zu können.
+                    Er nahm seine Axt und machte sich an die Arbeit. Als es Zeit für das Mittagessen wurde hatte er immerhin schon alle Äste ab und die meisten Sägearbeiten waren auch schon erledigt. Er ging hinein, schmiss etwas Holz auf das Feuer und suchte seine Pfanne. Er nahm ein wenig Speck und einige Eier und bereitete sich daraus sein Mittag zu. Eine halbe Pfeife später macht er sich wieder an die Arbeit. Das hacken ging schneller als gedacht, dank seiner neuen Axt die er von seiner liebsten bekommen hatte. So war er am späten Nachmittag fertig und er konnte beginnen den Karren zu beladen. "Heute Abend esse ich im Dorf, außerdem ist mein Bier leer" dachte er sich während er seine Stute vor die Karre spante.
+                </p>
+            </div>
+        </div>
+    </body>
+    <!-- Script to load the menu -->
+        <script>
+            // Fetch and insert the menu
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading menu:', error);
+                });
+        </script>
+</html>

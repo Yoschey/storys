@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Josh's Wunderwelt</title>
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-100">
+        <!-- Include the menu -->
+        <div id="menu-container"></div>
+
+        <div class="container mx-auto px-4 py-8"></div>
+            <div class="bg-white shadow-lg rounded-lg p-6 max-w-2xl mx-auto">
+                <h1 class="text-3xl font-bold text-indigo-700 mb-4">Willkommen auf meiner Seite</h1>
+                <div class="prose">
+                    <p class="text-gray-700 mb-3">
+                        Hier sammle ich alle Geschichten und Storys, die ich im Laufe der Zeit erstelle.
+                    </p>
+                    <p class="text-gray-600 italic">
+                        Bitte beachten: Ich bin ein absoluter Amateur und stehe noch am Anfang meiner kreativen Reise.
+                        Die Qualität mag variieren, aber die Leidenschaft ist echt!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Script to load the menu -->
+        <script>
+            // Fetch and insert the menu
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading menu:', error);
+                });
+        </script>
+    </body>
+</html>
